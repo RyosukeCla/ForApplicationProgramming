@@ -83,3 +83,22 @@ gitにはリポジトリという概念があります。上のリンク先で�
 4. ある程度までプログラミングし終わったら、コミットしてプッシュ (適宜、プルする)
 5. 管理者側へプルリクエスト
 
+## 3. gitのこまんど
+ブランチ、クローン、プルリク、プッシュ、コミットとか意味わからんとなっているかもしれないけど、
+黄にせずに以下のコマンドをうっていけばオッケーです。
+
+### 3. 開発者側
+1. devからdev/yourName-hogeを作成
+2. PCのどっかにフォルダを作成
+3. そのフォルダの中に入る (Terminalで cdで)
+4. $ git clone dev/yourName-hogeのブランチのURL
+5. すると、作成したフォルダの中に色々なのが入ってる。
+6. そこで色々と追加したり編集したりする。
+7. Terminalでcdしてcloneして作られたフォルダに入る。
+8. $ git branch でdev/yourName-hogeになっているか確認 -> なっていなかったら git checkout dev/yourName-hogeでブランチに接続
+9. $ git status で編集、追加、削除されたファイルを確認 -> 差分の確認
+10. $ git diff filePath で、そのファイルのどこが変わっているか確認
+11. $ git add filePath　で、そのファイルをcommitできる状態にする
+12. $ git commit -m "your comment" でcommitできる状態になっているファイルたちをリモートへ更新できる状態にする
+13. $ git push origin dev/yourName-hoge　でcommitしたやつらをリモートのdev/yourNamge-hogeブランチの更新をする
+14. ある程度できたら、dev/yourname-hogeをdevへプルリクエストする。
